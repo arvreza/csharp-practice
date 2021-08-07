@@ -10,7 +10,8 @@ namespace Tests
         {
             var warmups = new WarmUps();
             Assert.AreEqual(warmups.LastDigit(17, 7), true);
-           
+            Assert.AreNotEqual(warmups.LastDigit(6, 17), true);
+            Assert.AreEqual(warmups.LastDigit(3, 113), true);
         }
     }
 }
