@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+using System.Collections.Generic;
+
 namespace Tests
 {
     [TestClass]
@@ -22,5 +24,25 @@ namespace Tests
             Assert.AreEqual(warmups.DoubleChar("AAbb"), "AAAAbbbb");
             Assert.AreEqual(warmups.DoubleChar("Hi-There"), "HHii--TThheerree");
         }
+
+        [TestMethod]
+        public void TestZipZap() 
+        {
+            var warmups = new WarmUps();
+            Assert.AreEqual(warmups.ZipZap("zipXzap"), "zpXzp");
+            Assert.AreEqual(warmups.ZipZap("zopzop"), "zpzp");
+            Assert.AreEqual(warmups.ZipZap("zzzopzop"), "zzzpzp");
+        }
+
+        [TestMethod]
+        public void TestSubstring() 
+        {
+            var warmups = new WarmUps();
+            Assert.AreEqual(warmups.subString("zipXzap", "zap"), true);
+            Assert.AreEqual(warmups.subString("zopzop", "zip"), false);
+            Assert.AreEqual(warmups.subString("RezaArbabi", "eza"), true);
+        }
+
+
     }
 }
