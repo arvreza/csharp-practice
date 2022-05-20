@@ -70,18 +70,6 @@ public class WarmUps {
         two loops
         the outer loop goes through the big
         the inner loop goes through the small
-
-        zopzop
-        zip
-
-        i   j   Bi+j  Sj
-        0   0   z   z
-        0   1   o   i
-        1   0   o   z
-        2   0   p   z
-        
-
-
     */
     public bool subString(string big, string small) 
     {
